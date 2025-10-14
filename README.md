@@ -1,44 +1,61 @@
-# vCard - Personal portfolio
+# Vinay Ghate - Portfolio Website
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+A modern, responsive personal portfolio website showcasing my work as a System Engineer & AI Developer.
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+## About
 
-## Demo
+This portfolio website features:
+- **Dynamic Content**: All data loaded from JSON for easy updates
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile
+- **Modern UI**: Clean, professional design with smooth animations
+- **Fast Loading**: Optimized for quick page loads
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+## Technologies Used
 
-## Prerequisites
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Icons**: Ionicons
+- **Fonts**: Google Fonts (Poppins)
+- **Data Management**: JSON-based content system
 
-Before you begin, ensure you have met the following requirements:
+## Features
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+- ✅ Personal information and contact details
+- ✅ Education and professional experience
+- ✅ Project portfolio with filtering
+- ✅ Technical skills showcase
+- ✅ Activities and achievements
+- ✅ Coding profiles and social links
+- ✅ Blog section
+- ✅ Contact form with direct email integration
 
-## Installing vCard
+## Quick Start
 
-To install **vCard**, follow these steps:
+1. Clone or download the repository
+2. Open `index.html` in your browser
+3. To update content, edit `data.json` or modify the embedded data in `assets/js/data-loader.js`
 
-Linux and macOS:
+## Project Structure
 
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
 ```
-
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+├── index.html              # Main portfolio page
+├── data.json              # Portfolio data (for reference)
+├── assets/
+│   ├── js/
+│   │   ├── data-loader.js # Dynamic content loader
+│   │   └── script.js      # Interactive functionality
+│   ├── css/
+│   │   └── style.css      # Styling
+│   └── images/            # Portfolio images
+└── README.md              # This file
 ```
 
 ## Contact
 
-If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
+- **Email**: ghatevinay2@gmail.com
+- **LinkedIn**: [linkedin.com/in/vinay-ghate](https://linkedin.com/in/vinay-ghate)
+- **GitHub**: [github.com/vinay-ghate](https://github.com/vinay-ghate)
+- **Twitter**: [@vinayghate](https://x.com/vinayghate)
 
 ## License
 
-MIT
+MIT License - Feel free to use this template for your own portfolio!
