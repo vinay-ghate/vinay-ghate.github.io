@@ -1,6 +1,6 @@
 # Vinay Ghate - Portfolio Website
 
-A modern, responsive personal portfolio website showcasing my work as a System Engineer & AI Developer.
+A modern, responsive personal portfolio website showcasing my work as a Developer.
 
 ## About
 
