@@ -9,7 +9,7 @@ class PortfolioDataLoader {
     try {
       this.loadData();
       this.populateData();
-      this.initializePortfolioFilters();
+
     } catch (error) {
       console.error('Error loading portfolio data:', error);
     }
@@ -105,75 +105,123 @@ class PortfolioDataLoader {
       ],
       "projects": [
         {
-          "title": "TalkWithDB-AI-Agent",
-          "category": "applications",
-          "description": "AI Agent using Lang-chain and Gemini to talk with any SQLite file. Auto identify the table structure and create queries to find the accurate result with agentic AI approach.",
-          "technologies": ["Python", "LangChain", "Gemini", "SQLite"],
+          "title": "Arcadia",
+          "category": "web development",
+          "description": "A lovingly curated collection of small, simple, and fun games built with pure HTML, CSS, and JavaScript. No backends, no frameworks — just pure creative coding vibes.",
+          "technologies": ["HTML", "CSS", "JavaScript"],
           "image": "./assets/images/project-1.jpg",
-          "link": "https://github.com/vinay-ghate/TalkWithDB-AI-Agent"
+          "link": "https://github.com/vinay-ghate/Arcadia"
+        },
+        {
+          "title": "CallRecordsVisualizer",
+          "category": "applications",
+          "description": "Interactive dashboard for analyzing call records from PDF files. Users can upload single or multiple PDFs and explore multiple graphs for call analytics.",
+          "technologies": ["Python", "Streamlit", "Data Analysis", "Data Visualization"],
+          "image": "./assets/images/project-2.png",
+          "link": "https://github.com/vinay-ghate/CallRecordsVisualizer"
         },
         {
           "title": "ChatterPy",
           "category": "web development",
-          "description": "Python Flask based web-application with web-sockets for live chat. Custom rooms, anonymous chat, Realtime communication, added loggers for systems analysis.",
-          "technologies": ["Python", "Flask", "WebSockets", "HTML/CSS"],
-          "image": "./assets/images/project-2.png",
+          "description": "A real-time chat application built with Flask and Socket.IO, following the MVC architecture for clean separation of concerns.",
+          "technologies": ["Flask", "Socket.IO", "Python", "WebSockets"],
+          "image": "./assets/images/project-3.jpg",
           "link": "https://github.com/vinay-ghate/ChatterPy"
         },
         {
-          "title": "Diffusion Imaging Application",
+          "title": "SVMS (Society Vehicle Management System)",
           "category": "applications",
-          "description": "Built a simple open-source application on Python and DIPY to create 3D images from MRI data, providing a free alternative to paid software in the field.",
-          "technologies": ["Python", "PyQt", "DIPY", "TensorFlow"],
+          "description": "A Flask-based web app with authentication and OCR for automatic vehicle detection. It identifies vehicle numbers from images, checks records in the database, and updates or registers entries.",
+          "technologies": ["Python", "Flask", "SQLite", "OCR", "Deep Learning", "Image Processing"],
+          "image": "./assets/images/project-4.png",
+          "link": "https://github.com/vinay-ghate/SVMS-Society-Vehicle-Management-System"
+        },
+        {
+          "title": "SehatScan",
+          "category": "applications",
+          "description": "AI-powered medical report analysis that makes your health data clear and accessible.",
+          "technologies": ["Python", "GenAI", "OCR"],
+          "image": "./assets/images/project-5.png",
+          "link": "https://github.com/vinay-ghate/SehatScan"
+        },
+        {
+          "title": "MultiLLMChatbot",
+          "category": "applications",
+          "description": "A Streamlit-based web application that allows users to interact with multiple Large Language Models (LLMs) from different providers in a single unified interface.",
+          "technologies": ["Python", "Streamlit", "LangChain", "LLM APIs"],
+          "image": "./assets/images/project-6.png",
+          "link": "https://github.com/vinay-ghate/MultiLLMChatbot"
+        },
+        {
+          "title": "NotesBuddy",
+          "category": "web development",
+          "description": "A simple, secure web-based note-taking application with authentication. Create, manage, and organize notes with a clean, responsive interface.",
+          "technologies": ["Flask", "Python", "SQLAlchemy"],
+          "image": "./assets/images/project-7.png",
+          "link": "https://github.com/vinay-ghate/NotesBuddy"
+        },
+        {
+          "title": "Random Jokes WebApp",
+          "category": "web development",
+          "description": "A fun Flask app that displays random jokes with a gradient background and raining emoji effect. Uses the pyjokes library for fetching jokes.",
+          "technologies": ["Flask", "Pyjokes", "Python"],
+          "image": "./assets/images/project-8.jpg",
+          "link": "https://github.com/vinay-ghate/Random-jokes-webapp"
+        },
+        {
+          "title": "StudioOne – Image Editing Tool",
+          "category": "web development",
+          "description": "A lightweight, single-page photo editing app built with HTML, CSS, and Canvas. Features real-time compression control, background editing, cropping, and color adjustments.",
+          "technologies": ["HTML", "CSS", "Canvas", "JavaScript"],
+          "image": "./assets/images/project-9.png",
+          "link": "https://github.com/vinay-ghate/StudioOne-lmage-Editing-Tool"
+        },
+        {
+          "title": "TalkWithDB – AI Database Agent",
+          "category": "applications",
+          "description": "An AI Agent built with LangChain and Gemini to chat with any .db file — completely free to use.",
+          "technologies": ["LangChain", "Gemini API", "SQLite", "GenAI"],
+          "image": "./assets/images/project-1.jpg",
+          "link": "https://github.com/vinay-ghate/TalkWithDB-Al-Agent"
+        },
+        {
+          "title": "TheWebToolBox",
+          "category": "web development",
+          "description": "A lovingly curated collection of small, simple, and fun web utilities built with pure HTML, CSS, and JavaScript.",
+          "technologies": ["HTML", "CSS", "JavaScript"],
+          "image": "./assets/images/project-2.png",
+          "link": "https://github.com/vinay-ghate/TheWebToolBox"
+        },
+        {
+          "title": "Diffusion Imaging Visualization Application",
+          "category": "applications",
+          "description": "A Python-based visualization tool for diffusion imaging data using Dipy. Built with CustomTkinter and SQLite for authentication and history tracking.",
+          "technologies": ["Python", "Dipy", "SQLite", "CustomTkinter", "Visualization"],
           "image": "./assets/images/project-3.jpg",
           "link": "#"
         },
         {
-          "title": "AI Blog Generator Platform",
+          "title": "Notes WebApp",
           "category": "web development",
-          "description": "AI-powered platform for automated blog and webpage creation with SEO optimization. Built during internship at Scrobits Technologies.",
-          "technologies": ["Python", "AI/ML", "Next.js", "SEO"],
+          "description": "Simple notes web application using Flask and SQLAlchemy.",
+          "technologies": ["Python", "Flask", "SQLAlchemy"],
           "image": "./assets/images/project-4.png",
           "link": "#"
         },
         {
-          "title": "Kafka Performance Optimizer",
-          "category": "applications",
-          "description": "Internal POC built with Java and Kafka that reduced result delays by 30 times. System-level optimization for enterprise applications.",
-          "technologies": ["Java", "Kafka", "System Design", "Performance"],
+          "title": "Chirp – Twitter-like Platform",
+          "category": "web development",
+          "description": "A Twitter-like social media platform for sharing thoughts and connecting — coded for creativity and vibe.",
+          "technologies": ["Flask", "HTML", "CSS", "JavaScript"],
           "image": "./assets/images/project-5.png",
           "link": "#"
         },
         {
-          "title": "Linux Server Automation Suite",
-          "category": "web development",
-          "description": "Comprehensive automation scripts using bash and cronjobs for Linux server management, monitoring, and maintenance tasks.",
-          "technologies": ["Bash", "Linux", "Automation", "Monitoring"],
-          "image": "./assets/images/project-6.png",
-          "link": "#"
-        },
-        {
-          "title": "AI Hackathon Projects Collection",
+          "title": "Tel-Auto-Reaction-Bot",
           "category": "applications",
-          "description": "Multiple AI POCs developed for internal hackathons using Python, LangChain, RAG, and OpenAI technologies for various business solutions.",
-          "technologies": ["Python", "OpenAI", "RAG", "LangChain"],
-          "image": "./assets/images/project-7.png",
-          "link": "#"
-        },
-        {
-          "title": "Multi-Database Query Interface",
-          "category": "web development",
-          "description": "Interactive web interface for database management supporting MySQL, PostgreSQL, MongoDB, and ChromaDB with real-time query execution.",
-          "technologies": ["Python", "FastAPI", "Database", "Web Interface"],
-          "image": "./assets/images/project-8.jpg",
-          "link": "#"
-        },
-        {
-          "title": "Community Platform - IODump & GDSC",
-          "category": "web development",
-          "description": "Co-founded and developed community platforms for tech enthusiasts at college level with event management, hackathon organization features.",
-          "technologies": ["Python", "Django", "Community", "Events"],
-          "image": "./assets/images/project-9.png",
+          "description": "A Telegram bot that automatically reacts with random emojis to new messages in a group.",
+          "technologies": ["Python", "Telegram Bot API"],
+          "image": "./assets/images/project-6.png",
           "link": "#"
         }
       ],
@@ -277,7 +325,7 @@ class PortfolioDataLoader {
     this.populateSkillsDetailed();
     this.populateActivities();
     this.populateCodingProfiles();
-    this.populateProjects();
+    this.populateProjectsPage();
     this.populateBlog();
     this.populateContactSection();
     this.removeTestimonials();
@@ -526,25 +574,81 @@ class PortfolioDataLoader {
     }
   }
 
-  populateProjects() {
-    const { projects } = this.data;
-    const projectsList = document.querySelector('.project-list');
 
-    if (projectsList && projects) {
-      projectsList.innerHTML = projects.map(project => `
-        <li class="project-item active" data-filter-item data-category="${project.category.toLowerCase()}">
-          <a href="${project.link}">
-            <figure class="project-img">
-              <div class="project-item-icon-box">
-                <ion-icon name="eye-outline"></ion-icon>
+
+  populateProjectsPage() {
+    const { projects } = this.data;
+    const projectsContainer = document.querySelector('.projects-list-container');
+
+    if (projectsContainer && projects) {
+      projectsContainer.innerHTML = `
+        <div class="projects-grid-layout" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 20px;">
+          ${projects.map(project => `
+            <a href="${project.link}" target="_blank" class="project-card-link" style="text-decoration: none; color: inherit; display: block;">
+              <div class="project-card" style="background: var(--border-gradient-onyx); border-radius: 16px; padding: 0; overflow: hidden; box-shadow: var(--shadow-2); transition: all 0.3s ease; position: relative; cursor: pointer; height: 100%;">
+                <div class="project-card-inner" style="background: var(--bg-gradient-jet); border-radius: inherit; padding: 0; height: 100%; display: flex; flex-direction: column;">
+                  
+                  <div class="project-image-container" style="position: relative; height: 200px; overflow: hidden; border-radius: 16px 16px 0 0;">
+                    <img src="${project.image}" alt="${project.title}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" loading="lazy">
+                    <div class="project-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(255, 219, 112, 0.1) 0%, rgba(255, 219, 112, 0.05) 100%); opacity: 0; transition: opacity 0.3s ease;"></div>
+                    <div class="project-link-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                      <div class="link-icon" style="background: rgba(255, 219, 112, 0.9); color: #1e1e1f; padding: 12px; border-radius: 50%; font-size: 20px; transform: scale(0.8); transition: transform 0.3s ease;">
+                        <ion-icon name="open-outline"></ion-icon>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-content" style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column;">
+                    <h3 class="project-title" style="color: var(--white-2); font-size: 18px; font-weight: 600; margin-bottom: 12px; line-height: 1.3;">${project.title}</h3>
+                    
+                    <p class="project-description" style="color: var(--light-gray); font-size: 14px; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">${project.description}</p>
+                    
+                    <div class="project-technologies" style="margin-bottom: 15px;">
+                      <div class="tech-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        ${project.technologies.map(tech => `
+                          <span class="tech-tag" style="background: rgba(255, 219, 112, 0.1); color: #ffdb70; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 500; border: 1px solid rgba(255, 219, 112, 0.2);">${tech}</span>
+                        `).join('')}
+                      </div>
+                    </div>
+
+                    <div class="project-category-badge" style="background: rgba(255, 255, 255, 0.05); color: var(--light-gray-70); padding: 6px 12px; border-radius: 15px; font-size: 11px; text-transform: capitalize; border: 1px solid rgba(255, 255, 255, 0.1); width: fit-content;">
+                      ${project.category}
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img src="${project.image}" alt="${project.title}" loading="lazy">
-            </figure>
-            <h3 class="project-title">${project.title}</h3>
-            <p class="project-category">${project.category}</p>
-          </a>
-        </li>
-      `).join('');
+            </a>
+          `).join('')}
+        </div>
+      `;
+
+      // Add hover effects
+      const projectCards = document.querySelectorAll('.project-card');
+      projectCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          const overlay = card.querySelector('.project-overlay');
+          const linkOverlay = card.querySelector('.project-link-overlay');
+          const linkIcon = card.querySelector('.link-icon');
+          const image = card.querySelector('img');
+          
+          if (overlay) overlay.style.opacity = '1';
+          if (linkOverlay) linkOverlay.style.opacity = '1';
+          if (linkIcon) linkIcon.style.transform = 'scale(1)';
+          if (image) image.style.transform = 'scale(1.05)';
+        });
+
+        card.addEventListener('mouseleave', () => {
+          const overlay = card.querySelector('.project-overlay');
+          const linkOverlay = card.querySelector('.project-link-overlay');
+          const linkIcon = card.querySelector('.link-icon');
+          const image = card.querySelector('img');
+          
+          if (overlay) overlay.style.opacity = '0';
+          if (linkOverlay) linkOverlay.style.opacity = '0';
+          if (linkIcon) linkIcon.style.transform = 'scale(0.8)';
+          if (image) image.style.transform = 'scale(1)';
+        });
+      });
     }
   }
 
@@ -683,86 +787,7 @@ class PortfolioDataLoader {
     }
   }
 
-  initializePortfolioFilters() {
-    // Update portfolio filter categories to match our data
-    const filterButtons = document.querySelectorAll('[data-filter-btn]');
-    const selectItems = document.querySelectorAll('[data-select-item]');
 
-    // Update filter button text and add click handlers
-    if (filterButtons.length >= 4) {
-      filterButtons[1].textContent = 'Applications';
-      filterButtons[2].textContent = 'Web Development';
-      filterButtons[3].textContent = 'Python Development';
-
-      // Add data attributes for filtering
-      filterButtons[0].setAttribute('data-filter', 'all');
-      filterButtons[1].setAttribute('data-filter', 'applications');
-      filterButtons[2].setAttribute('data-filter', 'web development');
-      filterButtons[3].setAttribute('data-filter', 'python development');
-    }
-
-    if (selectItems.length >= 4) {
-      selectItems[1].textContent = 'Applications';
-      selectItems[2].textContent = 'Web Development';
-      selectItems[3].textContent = 'Python Development';
-
-      // Add data attributes for filtering
-      selectItems[0].setAttribute('data-filter', 'all');
-      selectItems[1].setAttribute('data-filter', 'applications');
-      selectItems[2].setAttribute('data-filter', 'web development');
-      selectItems[3].setAttribute('data-filter', 'python development');
-    }
-
-    // Add custom filter functionality
-    this.setupCustomFiltering();
-  }
-
-  setupCustomFiltering() {
-    const filterButtons = document.querySelectorAll('[data-filter-btn]');
-    const selectItems = document.querySelectorAll('[data-select-item]');
-
-    // Handle filter button clicks
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filterValue = button.getAttribute('data-filter') || button.textContent.toLowerCase();
-        this.filterProjects(filterValue);
-
-        // Update active state
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-      });
-    });
-
-    // Handle select dropdown
-    selectItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const filterValue = item.getAttribute('data-filter') || item.textContent.toLowerCase();
-        this.filterProjects(filterValue);
-
-        // Update select display
-        const selectValue = document.querySelector('[data-selecct-value]');
-        if (selectValue) {
-          selectValue.textContent = item.textContent;
-        }
-      });
-    });
-  }
-
-  filterProjects(filterValue) {
-    const projectItems = document.querySelectorAll('[data-filter-item]');
-
-    projectItems.forEach(item => {
-      const itemCategory = item.getAttribute('data-category');
-
-      if (filterValue === 'all' || itemCategory === filterValue) {
-        item.style.display = 'block';
-        item.classList.add('active');
-      } else {
-        item.style.display = 'none';
-        item.classList.remove('active');
-      }
-    });
-  }
 
   addContactHoverEffects() {
     const contactMethods = document.querySelectorAll('.contact-method');
