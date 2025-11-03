@@ -24,7 +24,7 @@ class PortfolioDataLoader {
         "email": "ghatevinay2@gmail.com",
         "birthday": "Jan 31, 2002",
         "location": "Pune, Maharashtra, India",
-        "avatar": "./assets/images/my-avatar.png",
+        "avatar": "http://vinay-ghate.github.io/mediaAssets/images/avatar/yellowShirtAvatar.png",
         "about": "I am a Python Developer from Pune, India, who enjoys building smart and practical solutions through code. I like exploring new technologies, understanding how systems work, and finding better ways to solve real-world problems. My approach to development is simple - write clean code, build useful products, and keep improving with every project.",
         "aboutExtended": "I work mostly with Python, AI/ML, and cloud technologies, creating automation tools, AI-based applications, and backend systems that make processes faster and more efficient. I enjoy experimenting with new frameworks, learning from hands-on experience, and turning creative ideas into working solutions that actually make a difference."
       },
@@ -42,22 +42,22 @@ class PortfolioDataLoader {
         {
           "title": "AI Development",
           "description": "Creating smart AI solutions using LangChain, RAG, and LLMs to automate workflows, handle data intelligently, and bring ideas to life through practical AI applications.",
-          "icon": "./assets/images/icon-dev.svg"
+          "icon": "http://vinay-ghate.github.io/mediaAssets/images/icons/icon-dev.svg"
         },
         {
           "title": "System Engineering",
           "description": "Designing reliable and scalable systems with a focus on automation, performance tuning, and smooth Linux server operations for better efficiency and uptime.",
-          "icon": "./assets/images/icon-app.svg"
+          "icon": "http://vinay-ghate.github.io/mediaAssets/images/icons/icon-app.svg"
         },
         {
           "title": "Python Development",
           "description": "Building end-to-end applications using Python frameworks like Flask, FastAPI, and Django — focusing on clean architecture, performance, and real-world usability.",
-          "icon": "./assets/images/icon-design.svg"
+          "icon": "http://vinay-ghate.github.io/mediaAssets/images/icons/icon-design.svg"
         },
         {
           "title": "Database Solutions",
           "description": "Designing and managing databases like MySQL, PostgreSQL, MongoDB, and ChromaDB to ensure data is organized, fast, and easy to work with for any project.",
-          "icon": "./assets/images/icon-photo.svg"
+          "icon": "http://vinay-ghate.github.io/mediaAssets/images/icons/icon-photo.svg"
         }
       ],
       "education": [
@@ -106,124 +106,88 @@ class PortfolioDataLoader {
       "projects": [
         {
           "title": "Arcadia",
-          "category": "web development",
           "description": "A lovingly curated collection of small, simple, and fun games built with pure HTML, CSS, and JavaScript. No backends, no frameworks — just pure creative coding vibes.",
           "technologies": ["HTML", "CSS", "JavaScript"],
-          "image": "./assets/images/project-1.jpg",
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/arcadia.png",
           "link": "https://github.com/vinay-ghate/Arcadia"
         },
         {
           "title": "CallRecordsVisualizer",
-          "category": "applications",
           "description": "Interactive dashboard for analyzing call records from PDF files. Users can upload single or multiple PDFs and explore multiple graphs for call analytics.",
           "technologies": ["Python", "Streamlit", "Data Analysis", "Data Visualization"],
-          "image": "./assets/images/project-2.png",
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/callRecordsVisualizer.png",
           "link": "https://github.com/vinay-ghate/CallRecordsVisualizer"
         },
         {
           "title": "ChatterPy",
-          "category": "web development",
           "description": "A real-time chat application built with Flask and Socket.IO, following the MVC architecture for clean separation of concerns.",
           "technologies": ["Flask", "Socket.IO", "Python", "WebSockets"],
-          "image": "./assets/images/project-3.jpg",
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/chatterPy.png",
           "link": "https://github.com/vinay-ghate/ChatterPy"
         },
         {
           "title": "SVMS (Society Vehicle Management System)",
-          "category": "applications",
           "description": "A Flask-based web app with authentication and OCR for automatic vehicle detection. It identifies vehicle numbers from images, checks records in the database, and updates or registers entries.",
           "technologies": ["Python", "Flask", "SQLite", "OCR", "Deep Learning", "Image Processing"],
-          "image": "./assets/images/project-4.png",
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/svpmGithub.png",
           "link": "https://github.com/vinay-ghate/SVMS-Society-Vehicle-Management-System"
         },
         {
           "title": "SehatScan",
-          "category": "applications",
           "description": "AI-powered medical report analysis that makes your health data clear and accessible.",
           "technologies": ["Python", "GenAI", "OCR"],
-          "image": "./assets/images/project-5.png",
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/sehatScan.png",
           "link": "https://github.com/vinay-ghate/SehatScan"
         },
         {
           "title": "MultiLLMChatbot",
-          "category": "applications",
           "description": "A Streamlit-based web application that allows users to interact with multiple Large Language Models (LLMs) from different providers in a single unified interface.",
           "technologies": ["Python", "Streamlit", "LangChain", "LLM APIs"],
-          "image": "./assets/images/project-6.png",
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/multiLLMChatbot.png",
           "link": "https://github.com/vinay-ghate/MultiLLMChatbot"
         },
         {
           "title": "NotesBuddy",
-          "category": "web development",
           "description": "A simple, secure web-based note-taking application with authentication. Create, manage, and organize notes with a clean, responsive interface.",
           "technologies": ["Flask", "Python", "SQLAlchemy"],
-          "image": "./assets/images/project-7.png",
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/notesBuddy.png",
           "link": "https://github.com/vinay-ghate/NotesBuddy"
         },
         {
           "title": "Random Jokes WebApp",
-          "category": "web development",
           "description": "A fun Flask app that displays random jokes with a gradient background and raining emoji effect. Uses the pyjokes library for fetching jokes.",
           "technologies": ["Flask", "Pyjokes", "Python"],
-          "image": "./assets/images/project-8.jpg",
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/randomJokesWebapp.png",
           "link": "https://github.com/vinay-ghate/Random-jokes-webapp"
         },
         {
           "title": "StudioOne – Image Editing Tool",
-          "category": "web development",
           "description": "A lightweight, single-page photo editing app built with HTML, CSS, and Canvas. Features real-time compression control, background editing, cropping, and color adjustments.",
           "technologies": ["HTML", "CSS", "Canvas", "JavaScript"],
-          "image": "./assets/images/project-9.png",
-          "link": "https://github.com/vinay-ghate/StudioOne-lmage-Editing-Tool"
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/studioOne.png",
+          "link": "https://github.com/vinay-ghate/StudioOne-Image-Editing-Tool"
         },
         {
           "title": "TalkWithDB – AI Database Agent",
-          "category": "applications",
           "description": "An AI Agent built with LangChain and Gemini to chat with any .db file — completely free to use.",
           "technologies": ["LangChain", "Gemini API", "SQLite", "GenAI"],
-          "image": "./assets/images/project-1.jpg",
-          "link": "https://github.com/vinay-ghate/TalkWithDB-Al-Agent"
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/talkwithdb.png",
+          "link": "https://github.com/vinay-ghate/TalkWithDB-AI-Agent"
         },
         {
           "title": "TheWebToolBox",
-          "category": "web development",
           "description": "A lovingly curated collection of small, simple, and fun web utilities built with pure HTML, CSS, and JavaScript.",
           "technologies": ["HTML", "CSS", "JavaScript"],
-          "image": "./assets/images/project-2.png",
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/theWebToolBox.png",
           "link": "https://github.com/vinay-ghate/TheWebToolBox"
         },
         {
-          "title": "Diffusion Imaging Visualization Application",
-          "category": "applications",
-          "description": "A Python-based visualization tool for diffusion imaging data using Dipy. Built with CustomTkinter and SQLite for authentication and history tracking.",
-          "technologies": ["Python", "Dipy", "SQLite", "CustomTkinter", "Visualization"],
-          "image": "./assets/images/project-3.jpg",
-          "link": "#"
-        },
-        {
-          "title": "Notes WebApp",
-          "category": "web development",
-          "description": "Simple notes web application using Flask and SQLAlchemy.",
-          "technologies": ["Python", "Flask", "SQLAlchemy"],
-          "image": "./assets/images/project-4.png",
-          "link": "#"
-        },
-        {
           "title": "Chirp – Twitter-like Platform",
-          "category": "web development",
           "description": "A Twitter-like social media platform for sharing thoughts and connecting — coded for creativity and vibe.",
           "technologies": ["Flask", "HTML", "CSS", "JavaScript"],
-          "image": "./assets/images/project-5.png",
-          "link": "#"
+          "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/chirp.png",
+          "link": "https://github.com/vinay-ghate/Chirp"
         },
-        {
-          "title": "Tel-Auto-Reaction-Bot",
-          "category": "applications",
-          "description": "A Telegram bot that automatically reacts with random emojis to new messages in a group.",
-          "technologies": ["Python", "Telegram Bot API"],
-          "image": "./assets/images/project-6.png",
-          "link": "#"
-        }
       ],
       "skills": [
         {
@@ -287,7 +251,7 @@ class PortfolioDataLoader {
           "category": "AI Development",
           "date": "2024-12-15",
           "description": "A comprehensive guide to building intelligent AI agents using LangChain framework with RAG implementation for better context understanding.",
-          "image": "./assets/images/blog-1.jpg",
+          "image": "http://vinay-ghate.github.io/blog-1.jpg",
           "link": "#"
         },
         {
@@ -295,7 +259,7 @@ class PortfolioDataLoader {
           "category": "Python Development",
           "date": "2024-12-10",
           "description": "Best practices for optimizing Python applications performance in production environments with real-world examples.",
-          "image": "./assets/images/blog-2.jpg",
+          "image": "http://vinay-ghate.github.io/blog-2.jpg",
           "link": "#"
         },
         {
@@ -303,7 +267,7 @@ class PortfolioDataLoader {
           "category": "System Engineering",
           "date": "2024-12-05",
           "description": "Essential practices for building and maintaining scalable systems using Linux automation and monitoring tools.",
-          "image": "./assets/images/blog-3.jpg",
+          "image": "http://vinay-ghate.github.io/blog-3.jpg",
           "link": "#"
         }
       ]
@@ -611,9 +575,7 @@ class PortfolioDataLoader {
                       </div>
                     </div>
 
-                    <div class="project-category-badge" style="background: rgba(255, 255, 255, 0.05); color: var(--light-gray-70); padding: 6px 12px; border-radius: 15px; font-size: 11px; text-transform: capitalize; border: 1px solid rgba(255, 255, 255, 0.1); width: fit-content;">
-                      ${project.category}
-                    </div>
+
                   </div>
                 </div>
               </div>
