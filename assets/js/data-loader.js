@@ -115,7 +115,7 @@ class PortfolioDataLoader {
           "title": "Chikistalaya",
           "description": "Chikistalaya is a comprehensive healthcare management platform designed to empower users with tools to manage their health effectively. It combines modern web technologies with advanced AI to provide a seamless healthcare experience.",
           "technologies": ["Python", "Generative AI", "Vibe Coding"],
-          "image": "https://github.com/vinay-ghate/mediaAssets/blob/master/images/projectSnaps/Chikistalaya1.png",
+          "image": "https://github.com/vinay-ghate/mediaAssets/raw/master/images/projectSnaps/Chikistalaya1.png",
           "link": "https://github.com/vinay-ghate/Chikistalaya"
         },
         {
@@ -129,7 +129,7 @@ class PortfolioDataLoader {
           "title": "API Key Checker",
           "description": "A simple and secure Streamlit application to validate your API keys for various LLM providers.",
           "technologies": ["Python", "Streamlit", "Gen AI"],
-          "image": "https://github.com/vinay-ghate/mediaAssets/blob/master/images/projectSnaps/LLMApiKeyChecker.png",
+          "image": "https://github.com/vinay-ghate/mediaAssets/raw/master/images/projectSnaps/LLMApiKeyChecker.png",
           "link": "https://github.com/vinay-ghate/LLM-ApiKey-Checker"
         },
         {
