@@ -105,6 +105,13 @@ class PortfolioDataLoader {
       ],
       "projects": [
         {
+          "title": "The-Gauntlet",
+          "description": "A powerful AI-powered system operations dashboard with real-time monitoring, terminal access, and intelligent agent assistance.",
+          "technologies": ["Python", "Generative AI", "TypeScript"],
+          "image": "https://github.com/vinay-ghate/mediaAssets/raw/master/images/projectSnaps/thegauntlet03.png",
+          "link": "https://github.com/vinay-ghate/The-Gauntlet/"
+        },
+        {
           "title": "Arcadia",
           "description": "A lovingly curated collection of small, simple, and fun games built with pure HTML, CSS, and JavaScript. No backends, no frameworks — just pure creative coding vibes.",
           "technologies": ["HTML", "CSS", "JavaScript"],
