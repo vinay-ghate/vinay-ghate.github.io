@@ -112,6 +112,13 @@ class PortfolioDataLoader {
           "link": "https://github.com/vinay-ghate/The-Gauntlet/"
         },
         {
+          "title": "Chikistalaya",
+          "description": "Chikistalaya is a comprehensive healthcare management platform designed to empower users with tools to manage their health effectively. It combines modern web technologies with advanced AI to provide a seamless healthcare experience.",
+          "technologies": ["Python", "Generative AI", "Vibe Coding"],
+          "image": "https://github.com/vinay-ghate/mediaAssets/blob/master/images/projectSnaps/Chikistalaya1.png",
+          "link": "https://github.com/vinay-ghate/Chikistalaya"
+        },
+        {
           "title": "Arcadia",
           "description": "A lovingly curated collection of small, simple, and fun games built with pure HTML, CSS, and JavaScript. No backends, no frameworks — just pure creative coding vibes.",
           "technologies": ["HTML", "CSS", "JavaScript"],
