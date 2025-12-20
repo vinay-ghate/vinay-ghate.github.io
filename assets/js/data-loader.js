@@ -126,6 +126,13 @@ class PortfolioDataLoader {
           "link": "https://github.com/vinay-ghate/Arcadia"
         },
         {
+          "title": "API Key Checker",
+          "description": "A simple and secure Streamlit application to validate your API keys for various LLM providers.",
+          "technologies": ["Python", "Streamlit", "Gen AI"],
+          "image": "https://github.com/vinay-ghate/mediaAssets/blob/master/images/projectSnaps/LLMApiKeyChecker.png",
+          "link": "https://github.com/vinay-ghate/LLM-ApiKey-Checker"
+        },
+        {
           "title": "CallRecordsVisualizer",
           "description": "Interactive dashboard for analyzing call records from PDF files. Users can upload single or multiple PDFs and explore multiple graphs for call analytics.",
           "technologies": ["Python", "Streamlit", "Data Analysis", "Data Visualization"],
