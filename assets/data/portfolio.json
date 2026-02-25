@@ -59,28 +59,27 @@
   ],
   "experience": [
     {
-      "position": "System Engineer C1",
+      "position": "System Engineer",
       "company": "Tata Consultancy Services",
-      "period": "Nov 2024 - Present",
-      "location": "Mumbai, India",
+      "period": "Nov 2024 – Present",
+      "location": "Pune, India",
       "responsibilities": [
-        "Engineered an internal POC using Java and Apache Kafka, reducing data processing delays by 30x",
-        "Spearheaded the development of AI agents for internal hackathons using Python, LangChain, and RAG",
-        "Managed enterprise Linux server environments, ensuring high availability and user access control",
-        "Designed and deployed Bash scripts and Cron jobs to automate routine system maintenance"
+        "Backend Development: Working on Java-based streaming backend services running in Linux environments, implementing business logic to support event-driven workflows.",
+        "Kafka Integration: Contributing to Apache Kafka-based processing, handling producer/consumer logic and supporting Kafka clusters managed via Strimzi.",
+        "Kubernetes & Deployment: Deploying and maintaining services on Kubernetes using YAML manifests, troubleshooting container-level and configuration issues.",
+        "Secure Communication: Supporting mTLS-based inter-service communication and working with PKI-based certificates for secure authentication.",
+        "Debugging & Issue Resolution: Analyzing logs and runtime behavior to diagnose and resolve application and deployment-related issues."
       ]
     },
     {
       "position": "Python Developer Intern",
       "company": "Scrobits Technologies",
-      "period": "June 2024 – Nov 2024",
-      "location": "Pune, India",
+      "period": "Jun 2024 – Nov 2024",
+      "location": "Mumbai, India",
       "responsibilities": [
-        "Built an AI-driven platform to automate blog and webpage creation, streamlining the content generation pipeline",
-        "Developed functional AI POCs for clients, demonstrating the practical application of LLMs",
-        "Enhanced the company's Next.js website by integrating dynamic data sources for improved functionality",
-        "Conducted in-depth SEO research and implemented AI-driven strategies to improve ranking",
-        "Mentored participants in an internal AI hackathon, guiding project structure and development"
+        "Backend Development: Developed backend services and automation workflows using Python.",
+        "REST APIs: Built and integrated RESTful APIs for frontend applications and data processing workflows.",
+        "Proof of Concepts: Worked on client-facing POCs involving data transformation and workflow automation."
       ]
     }
   ],
