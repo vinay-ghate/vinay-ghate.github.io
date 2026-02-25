@@ -5,9 +5,9 @@ class PortfolioDataLoader {
     this.init();
   }
 
-  init() {
+  async init() {
     try {
-      this.loadData();
+      await this.loadData();
       this.populateData();
 
     } catch (error) {
@@ -15,298 +15,22 @@ class PortfolioDataLoader {
     }
   }
 
-  loadData() {
-    // Embedded data from data.json for instant loading (no network request needed)
-    this.data = {
-  "personal": {
-    "name": "Vinay Ghate",
-    "title": "Python and AI Developer",
-    "email": "ghatevinay2@gmail.com",
-    "birthday": "Jan 31, 2002",
-    "location": "Pune, Maharashtra, India",
-    "avatar": "http://vinay-ghate.github.io/mediaAssets/images/avatar/yellowShirtAvatar.png",
-    "about": "Python Developer based in Pune, India, dedicated to building smart, practical solutions through clean code. Passionate about exploring new technologies, system internals, and solving real-world problems. My approach is simple: write clean code, build useful products, and keep improving with every project.",
-    "aboutExtended": "Experienced in Python, AI/ML, and cloud technologies, creating automation tools, backend systems, and AI-based applications that enhance efficiency. Committed to continuous improvement and turning creative ideas into working products that make a difference."
-  },
-  "contact": {
-    "email": "ghatevinay2@gmail.com",
-    "location": "Pune, Maharashtra, India"
-  },
-  "social": {
-    "linkedin": "https://linkedin.com/in/vinay-ghate",
-    "github": "https://github.com/vinay-ghate",
-    "twitter": "https://x.com/vinayghate",
-    "instagram": "https://www.instagram.com/vinay_ghate/"
-  },
-  "services": [
-    {
-      "title": "AI Development",
-      "description": "Creating smart AI solutions using LangChain, RAG, and LLMs to automate workflows, handle data intelligently, and bring ideas to life through practical AI applications.",
-      "icon": "http://vinay-ghate.github.io/mediaAssets/images/icons/icon-dev.svg"
-    },
-    {
-      "title": "System Engineering",
-      "description": "Designing reliable and scalable systems with a focus on automation, performance tuning, and smooth Linux server operations for better efficiency and uptime.",
-      "icon": "http://vinay-ghate.github.io/mediaAssets/images/icons/icon-app.svg"
-    },
-    {
-      "title": "Python Development",
-      "description": "Building end-to-end applications using Python frameworks like Flask, FastAPI, and Django — focusing on clean architecture, performance, and real-world usability.",
-      "icon": "http://vinay-ghate.github.io/mediaAssets/images/icons/icon-design.svg"
-    },
-    {
-      "title": "Database Solutions",
-      "description": "Designing and managing databases like MySQL, PostgreSQL, MongoDB, and ChromaDB to ensure data is organized, fast, and easy to work with for any project.",
-      "icon": "http://vinay-ghate.github.io/mediaAssets/images/icons/icon-photo.svg"
+  async loadData() {
+    try {
+      const response = await fetch('./assets/data/portfolio.json');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      this.data = await response.json();
+    } catch (error) {
+      console.error('Failed to load portfolio data:', error);
+      this.data = null;
     }
-  ],
-  "education": [
-    {
-      "institution": "Zeal College of Engineering Pune",
-      "degree": "Bachelor of Engineering [Computer] + Honors in Cyber Security",
-      "period": "2020 - 2024",
-      "location": "Pune, India",
-      "cgpa": "8.41",
-      "coursework": "DBMS, OS, AIML, Cyber Security"
-    },
-    {
-      "institution": "Tuljaram Chaturachand Junior College of Science",
-      "degree": "Higher Secondary Education",
-      "period": "2018 - 2020",
-      "location": "Baramati, India"
-    }
-  ],
-  "experience": [
-    {
-      "position": "System Engineer C1",
-      "company": "Tata Consultancy Services",
-      "period": "Nov 2024 - Present",
-      "location": "Mumbai, India",
-      "responsibilities": [
-        "Engineered an internal POC using Java and Apache Kafka, reducing data processing delays by 30x",
-        "Spearheaded the development of AI agents for internal hackathons using Python, LangChain, and RAG",
-        "Managed enterprise Linux server environments, ensuring high availability and user access control",
-        "Designed and deployed Bash scripts and Cron jobs to automate routine system maintenance"
-      ]
-    },
-    {
-      "position": "Python Developer Intern",
-      "company": "Scrobits Technologies",
-      "period": "June 2024 – Nov 2024",
-      "location": "Pune, India",
-      "responsibilities": [
-        "Built an AI-driven platform to automate blog and webpage creation, streamlining the content generation pipeline",
-        "Developed functional AI POCs for clients, demonstrating the practical application of LLMs",
-        "Enhanced the company's Next.js website by integrating dynamic data sources for improved functionality",
-        "Conducted in-depth SEO research and implemented AI-driven strategies to improve ranking",
-        "Mentored participants in an internal AI hackathon, guiding project structure and development"
-      ]
-    }
-  ],
-  "projects": [
-    {
-      "title": "Chikistalaya",
-      "description": "Healthcare Management Platform developed with TypeScript and Python. Features backend APIs for medical records, reminders, and an integrated AI assistant for contextual responses.",
-      "technologies": ["TypeScript", "Python", "Docker", "AI"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/chikistalaya.png",
-      "link": "https://github.com/vinay-ghate/Chikistalaya"
-    },
-    {
-      "title": "Arcadia",
-      "description": "A lovingly curated collection of small, simple, and fun games built with pure HTML, CSS, and JavaScript. No backends, no frameworks — just pure creative coding vibes.",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/arcadia.png",
-      "link": "https://github.com/vinay-ghate/Arcadia"
-    },
-    {
-      "title": "CallRecordsVisualizer",
-      "description": "Interactive dashboard for analyzing call records from PDF files. Users can upload single or multiple PDFs and explore multiple graphs for call analytics.",
-      "technologies": ["Python", "Streamlit", "Data Analysis", "Data Visualization"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/callRecordsVisualizer.png",
-      "link": "https://github.com/vinay-ghate/CallRecordsVisualizer"
-    },
-    {
-      "title": "ChatterPy",
-      "description": "A real-time chat application built with Flask and Socket.IO, following the MVC architecture for clean separation of concerns.",
-      "technologies": ["Flask", "Socket.IO", "Python", "WebSockets"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/chatterPy.png",
-      "link": "https://github.com/vinay-ghate/ChatterPy"
-    },
-    {
-      "title": "SVMS (Society Vehicle Management System)",
-      "description": "A Flask-based web app with authentication and OCR for automatic vehicle detection. It identifies vehicle numbers from images, checks records in the database, and updates or registers entries.",
-      "technologies": ["Python", "Flask", "SQLite", "OCR", "Deep Learning", "Image Processing"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/svpmGithub.png",
-      "link": "https://github.com/vinay-ghate/SVMS-Society-Vehicle-Management-System"
-    },
-    {
-      "title": "SehatScan",
-      "description": "AI-powered medical report analysis that makes your health data clear and accessible.",
-      "technologies": ["Python", "GenAI", "OCR"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/sehatScan.png",
-      "link": "https://github.com/vinay-ghate/SehatScan"
-    },
-    {
-      "title": "MultiLLMChatbot",
-      "description": "A Streamlit-based web application that allows users to interact with multiple Large Language Models (LLMs) from different providers in a single unified interface.",
-      "technologies": ["Python", "Streamlit", "LangChain", "LLM APIs"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/multiLLMChatbot.png",
-      "link": "https://github.com/vinay-ghate/MultiLLMChatbot"
-    },
-    {
-      "title": "NotesBuddy",
-      "description": "A simple, secure web-based note-taking application with authentication. Create, manage, and organize notes with a clean, responsive interface.",
-      "technologies": ["Flask", "Python", "SQLAlchemy"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/notesBuddy.png",
-      "link": "https://github.com/vinay-ghate/NotesBuddy"
-    },
-    {
-      "title": "Random Jokes WebApp",
-      "description": "A fun Flask app that displays random jokes with a gradient background and raining emoji effect. Uses the pyjokes library for fetching jokes.",
-      "technologies": ["Flask", "Pyjokes", "Python"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/randomJokesWebapp.png",
-      "link": "https://github.com/vinay-ghate/Random-jokes-webapp"
-    },
-    {
-      "title": "StudioOne – Image Editing Tool",
-      "description": "A lightweight, single-page photo editing app built with HTML, CSS, and Canvas. Features real-time compression control, background editing, cropping, and color adjustments.",
-      "technologies": ["HTML", "CSS", "Canvas", "JavaScript"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/studioOne.png",
-      "link": "https://github.com/vinay-ghate/StudioOne-Image-Editing-Tool"
-    },
-    {
-      "title": "TalkWithDB – AI Database Agent",
-      "description": "An AI Agent built with LangChain and Gemini to chat with any .db file — completely free to use.",
-      "technologies": ["LangChain", "Gemini API", "SQLite", "GenAI"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/talkwithdb.png",
-      "link": "https://github.com/vinay-ghate/TalkWithDB-AI-Agent"
-    },
-    {
-      "title": "TheWebToolBox",
-      "description": "A lovingly curated collection of small, simple, and fun web utilities built with pure HTML, CSS, and JavaScript.",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/theWebToolBox.png",
-      "link": "https://github.com/vinay-ghate/TheWebToolBox"
-    },
-    {
-      "title": "Chirp – Twitter-like Platform",
-      "description": "A Twitter-like social media platform for sharing thoughts and connecting — coded for creativity and vibe.",
-      "technologies": ["Flask", "HTML", "CSS", "JavaScript"],
-      "image": "http://vinay-ghate.github.io/mediaAssets/images/projectSnaps/chirp.png",
-      "link": "https://github.com/vinay-ghate/Chirp"
-    }
-  ],
-  "skills": [
-    {
-      "category": "Languages",
-      "items": ["Python", "Java", "HTML/CSS", "SQL", "Bash"]
-    },
-    {
-      "category": "Generative AI",
-      "items": ["Langchain", "n8n", "custom agents", "MCP", "RAG", "LLMs", "Prompting"]
-    },
-    {
-      "category": "Developer Tools",
-      "items": ["VS Code", "Git", "GitHub", "Docker", "Kubernetes", "Postman", "Jupyter Notebook"]
-    },
-    {
-      "category": "Technologies/Frameworks",
-      "items": ["Flask", "Apache Kafka", "Strimzi", "FastAPI", "Django", "Google Cloud", "NumPy"]
-    },
-    {
-      "category": "Databases",
-      "items": ["MySQL", "SQLite", "PostgreSQL", "MongoDB", "Chroma DB"]
-    }
-  ],
-  "certifications": [
-    {
-      "title": "Microsoft Certified: Azure AI Fundamentals",
-      "issuer": "Microsoft",
-      "year": "2024"
-    },
-    {
-      "title": "Data Streaming Engineer",
-      "issuer": "Confluent",
-      "year": "2024"
-    },
-    {
-      "title": "OCI Certified AI Foundations Associate",
-      "issuer": "Oracle",
-      "year": "2024"
-    },
-    {
-      "title": "OCI Certified Foundations Associate",
-      "issuer": "Oracle",
-      "year": "2024"
-    }
-  ],
-  "skillsProgress": [
-    {
-      "skill": "Python",
-      "percentage": 90
-    },
-    {
-      "skill": "AI/ML",
-      "percentage": 85
-    },
-    {
-      "skill": "Web Development",
-      "percentage": 80
-    },
-    {
-      "skill": "Database Management",
-      "percentage": 85
-    },
-    {
-      "skill": "System Engineering",
-      "percentage": 75
-    }
-  ],
-  "activities": [
-    "Started communities like IODump and GDSC ZCOER with few friends at college level",
-    "Organized few events, hackathons, tech activities also volunteered in few",
-    "Got selected for Amazon ML Summer School 2023"
-  ],
-  "codingProfiles": {
-    "github": "https://github.com/vinay-ghate",
-    "geeksforgeeks": "https://auth.geeksforgeeks.org/user/vinay_ghate",
-    "googleDev": "https://developers.google.com/profile/u/vinay_ghate",
-    "leetcode": "https://leetcode.com/u/vinay_ghate/",
-    "twitter": "https://x.com/vinayghate"
-  },
-  "blog": [
-    {
-      "title": "Building AI Agents with LangChain and RAG",
-      "category": "AI Development",
-      "date": "2024-12-15",
-      "description": "A comprehensive guide to building intelligent AI agents using LangChain framework with RAG implementation for better context understanding.",
-      "image": "http://vinay-ghate.github.io/blog-1.jpg",
-      "link": "#"
-    },
-    {
-      "title": "Python Performance Optimization Techniques",
-      "category": "Python Development",
-      "date": "2024-12-10",
-      "description": "Best practices for optimizing Python applications performance in production environments with real-world examples.",
-      "image": "http://vinay-ghate.github.io/blog-2.jpg",
-      "link": "#"
-    },
-    {
-      "title": "System Engineering with Linux Automation",
-      "category": "System Engineering",
-      "date": "2024-12-05",
-      "description": "Essential practices for building and maintaining scalable systems using Linux automation and monitoring tools.",
-      "image": "http://vinay-ghate.github.io/blog-3.jpg",
-      "link": "#"
-    }
-  ]
-};
   }
 
   populateData() {
     if (!this.data) return;
 
-    this.removeHardcodedContent();
     this.populatePersonalInfo();
     this.populateContact();
     this.populateSocial();
@@ -321,29 +45,6 @@ class PortfolioDataLoader {
     this.populateProjectsPage();
     this.populateBlog();
     this.populateContactSection();
-    this.removeTestimonials();
-    this.removeClients();
-  }
-
-  removeHardcodedContent() {
-    // Remove hardcoded about text and replace with empty content initially
-    const aboutTextElements = document.querySelectorAll('.about-text p');
-    aboutTextElements.forEach(p => {
-      p.textContent = '';
-    });
-
-    // Clear hardcoded name and title
-    const nameElement = document.querySelector('.sidebar .name');
-    const titleElement = document.querySelector('.sidebar .title');
-    if (nameElement) nameElement.textContent = '';
-    if (titleElement) titleElement.textContent = '';
-
-    // Clear hardcoded email
-    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
-    emailLinks.forEach(link => {
-      link.textContent = '';
-      link.href = 'mailto:';
-    });
   }
 
   populatePersonalInfo() {
@@ -621,7 +322,7 @@ class PortfolioDataLoader {
           const linkOverlay = card.querySelector('.project-link-overlay');
           const linkIcon = card.querySelector('.link-icon');
           const image = card.querySelector('img');
-          
+
           if (overlay) overlay.style.opacity = '1';
           if (linkOverlay) linkOverlay.style.opacity = '1';
           if (linkIcon) linkIcon.style.transform = 'scale(1)';
@@ -633,7 +334,7 @@ class PortfolioDataLoader {
           const linkOverlay = card.querySelector('.project-link-overlay');
           const linkIcon = card.querySelector('.link-icon');
           const image = card.querySelector('img');
-          
+
           if (overlay) overlay.style.opacity = '0';
           if (linkOverlay) linkOverlay.style.opacity = '0';
           if (linkIcon) linkIcon.style.transform = 'scale(0.8)';
@@ -756,29 +457,6 @@ class PortfolioDataLoader {
       this.addContactHoverEffects();
     }
   }
-
-  removeTestimonials() {
-    // Remove testimonials section since it's not relevant for a developer portfolio
-    const testimonialsSection = document.querySelector('.testimonials');
-    if (testimonialsSection) {
-      testimonialsSection.style.display = 'none';
-    }
-
-    const testimonialsModal = document.querySelector('.modal-container');
-    if (testimonialsModal) {
-      testimonialsModal.style.display = 'none';
-    }
-  }
-
-  removeClients() {
-    // Remove clients section since it's not relevant for a developer portfolio
-    const clientsSection = document.querySelector('.clients');
-    if (clientsSection) {
-      clientsSection.style.display = 'none';
-    }
-  }
-
-
 
   addContactHoverEffects() {
     const contactMethods = document.querySelectorAll('.contact-method');
