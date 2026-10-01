@@ -8,10 +8,10 @@ const GA_ID_PATTERN = /^G-[A-Z0-9]+$/;
 const clientOutputDirectory = path.resolve("dist/public");
 const BLOG_TITLE = "AI/ML Engineering Blog — Vinay Ghate";
 const BLOG_DESCRIPTION = "Insights on AI, machine learning, LLM systems, and practical production engineering from Vinay Ghate.";
-const BLOG_URL = "http://v1nay.is-a.dev/blog/";
+const BLOG_URL = "https://v1nay.is-a.dev/blog/";
 const WORKS_TITLE = "Selected Work — Vinay Ghate";
 const WORKS_DESCRIPTION = "Open-source AI/ML projects by Vinay Ghate: LLM systems, RAG agents, search infrastructure, and applied deep learning.";
-const WORKS_URL = "http://v1nay.is-a.dev/works/";
+const WORKS_URL = "https://v1nay.is-a.dev/works/";
 
 function replaceRequired(html: string, pattern: RegExp, replacement: string, label: string) {
   if (!pattern.test(html)) {
