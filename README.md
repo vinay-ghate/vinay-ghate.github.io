@@ -1,6 +1,6 @@
 # 🚀 Modern AI/ML Engineer Portfolio
 
-A production-ready, full-stack portfolio website built with modern technologies. Features include error monitoring, analytics, automated deployment, and a complete AI/ML showcase.
+A production-ready, full-stack portfolio website built with modern technologies. Features include error monitoring, analytics, automated deployment, and a complete AI - Backend showcase.
 
 ## 🎯 Quick Start
 
